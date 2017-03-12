@@ -1,0 +1,10 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 8.7.1 _Jessie_ - Official i386 NETINST Binary-1 20170116-10:07]/ jessie main
+
+deb cdrom:[Debian GNU/Linux 8.7.1 _Jessie_ - Official i386 NETINST Binary-1 20170116-10:07]/ jessie main
+
+# Line commented out by installer because it failed to verify:
+#deb http://security.debian.org/ jessie/updates main
+# Line commented out by installer because it failed to verify:
+#deb-src http://security.debian.org/ jessie/updates main

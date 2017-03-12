@@ -1,0 +1,10 @@
+TARGETS = exim4 urandom sendsigs rsyslog umountnfs.sh hwclock.sh networking umountfs umountroot halt reboot
+sendsigs: exim4
+rsyslog: sendsigs exim4
+umountnfs.sh: rsyslog sendsigs exim4
+hwclock.sh: rsyslog
+networking: umountnfs.sh exim4
+umountfs: hwclock.sh networking urandom umountnfs.sh exim4
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

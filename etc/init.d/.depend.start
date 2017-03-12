@@ -1,0 +1,9 @@
+TARGETS = rsyslog motd killprocs dbus acpid cron exim4 bootlogs single rmnologin rc.local
+INTERACTIVE =
+dbus: rsyslog
+acpid: rsyslog
+cron: rsyslog
+exim4: rsyslog
+single: killprocs motd bootlogs
+rmnologin: rsyslog motd bootlogs dbus acpid cron exim4
+rc.local: rsyslog motd bootlogs dbus acpid cron exim4
